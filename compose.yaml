@@ -1,0 +1,12 @@
+﻿services:
+  blazorlifecycle:
+    image: blazorlifecycle
+    build:
+      context: .
+      dockerfile: BlazorLifecycle/BlazorLifecycle/Dockerfile
+
+  blazorlifecycle.client:
+    image: blazorlifecycle.client
+    build:
+      context: .
+      dockerfile: BlazorLifecycle/BlazorLifecycle.Client/Dockerfile

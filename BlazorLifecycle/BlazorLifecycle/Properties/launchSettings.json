@@ -27,7 +27,7 @@
       "workingDirectory": "$(ProjectDir)",
       "hotReloadEnabled": true,
       "hotReloadProfile": "blazorwasm",
-      "commandLineArgs": "watch run",
+      "commandLineArgs": "watch",
       "launchBrowser": true,
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"

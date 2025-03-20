@@ -1,0 +1,29 @@
+@attribute [Route(PageUrls.SetParamsAsync)]
+
+<PageTitle>@Title</PageTitle>
+
+<h1><code>@Title</code></h1>
+<p>@_message</p>
+
+@code {
+
+    [Parameter] public string? Param { get; set; }
+
+    private const string Title = "SetParametersAsync";
+    string _message = "Not set";
+
+    public override async Task SetParametersAsync(ParameterView parameters)
+    {
+        if (parameters.TryGetValue<string>(nameof(Param), out var value))
+        {
+            _message = value switch
+            {
+                null => "The value of 'Param' is null.",
+                _ => $"The value of 'Param' is {value}."
+            };
+        }
+
+        await base.SetParametersAsync(parameters);
+    }
+
+}

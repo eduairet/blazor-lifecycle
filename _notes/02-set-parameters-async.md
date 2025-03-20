@@ -5,8 +5,8 @@
   - The `ParameterView` is a struct that contains the parameters of the component.
 - Generally, we have to use `base.SetParametersAsync(ParameterView)` when overriding
   - Calling `base.SetParametersAsync(ParameterView)` is important to ensure that the component is updated correctly.
-  - `await base.SetParametersAsync(ParameterView.Empty);` is used when need the method but we don't need to process the parameters.
-- `ParameterView.TryGetValue<T>(string key, out T value)` is used to get the value of a parameter (case sensitive for routing parameters).
+  - `await base.SetParametersAsync(ParameterView.Empty);` is used when need the method, but we don't need to process the parameters.
+- `ParameterView.TryGetValue<T>(string key, out T value)` is used to get the value of a parameter (case-sensitive for routing parameters).
 
     ```razor
     @page "/set-params-async/{Param?}"
